@@ -1,6 +1,4 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
 include "account.php";
 
 // Load composer
@@ -8,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $bot_api_key  = $API_KEY;
 $bot_username = $BOT_NAME;
-$hook_url = 'https://telegram-bot-sample.herokuapp.com';
+$hook_url = 'https://telegram-bot-sample.herokuapp.com/hook.php';
 
 try {
     // Create Telegram API object
