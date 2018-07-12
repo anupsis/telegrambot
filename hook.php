@@ -18,6 +18,12 @@ try {
     // log telegram errors
 	echo "<pre>";
 	print_r($e);
+	$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+	$txt = "John Doe\n";
+	fwrite($myfile, $e);
+	// $txt = "Jane Doe\n";
+	// fwrite($myfile, $txt);
+	fclose($myfile);
     echo $e->getMessage();
 }
 ?>
