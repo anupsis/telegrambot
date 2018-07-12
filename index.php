@@ -34,13 +34,18 @@
 				
 				fclose($text);
 				
-				$replace= str_replace("} {","} </br> {",$text_content);
+				// $replace= str_replace("} {","} \r {",$text_content);
 				// echo $replace;
-				$split_text_content=explode("</br>",$replace);
+				// $split_text_content=explode("\r",$replace);
+				$split_text_content=explode("\n",$text_content);
+				// echo count($split_text_content);
+				// echo $split_text_content[0];
 				// print_r($split_text_content);
 				foreach($split_text_content as $arr){
 					if(strlen($arr) >0 ){
-						$msg_json=json_decode($arr);
+						$msg_json=json_decode(trim($arr));
+						// print_r($arr);
+						// print_r($msg_json);
 						if($msg_json != NULL){
 							$name = $msg_json->message->from->first_name." ".$msg_json->message->from->last_name;
 							$message = $msg_json->message->text;
@@ -65,8 +70,8 @@
 		</p>
 	</body>
 	<script>
-		setInterval(function(){
-			window.location.reload();
-		}, 5000)
+		// setInterval(function(){
+			// window.location.reload();
+		// }, 5000)
 	</script>
 </html>
