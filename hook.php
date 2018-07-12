@@ -11,9 +11,9 @@ try {
     // Create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
     // Add commands paths containing your custom commands
-    $telegram->addCommandsPaths($commands_paths);
+    // $telegram->addCommandsPaths($commands_paths);
     // Enable admin users
-    $telegram->enableAdmins($admin_users);
+    // $telegram->enableAdmins($admin_users);
     // Enable MySQL
     //$telegram->enableMySql($mysql_credentials);
     // Logging (Error, Debug and Raw Updates)

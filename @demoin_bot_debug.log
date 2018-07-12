@@ -1,0 +1,4 @@
+[2018-07-12 03:08:35] bot_log.ERROR: Longman\TelegramBot\Exception\TelegramException: Input is empty! in D:\PTIK\php\telegrambot\vendor\longman\telegram-bot\src\Telegram.php:415
+Stack trace:
+#0 D:\PTIK\php\telegrambot\hook.php(36): Longman\TelegramBot\Telegram->handle()
+#1 {main} [] []
