@@ -30,6 +30,7 @@
 			<?php
 				$text=fopen('@demoin_bot_update.log','r');
 				$text_content= fread($text,filesize("@demoin_bot_update.log"));
+				var_dump($text_content);
 				fclose($text);
 				
 				$split_text_content=explode("\r",$text_content);
