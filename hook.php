@@ -8,7 +8,7 @@ $bot_api_key  = $API_KEY;
 $bot_username = $BOT_NAME;
 
 $commands_paths = [
-	__DIR__. '/Commands',
+	__DIR__. '/Commands/StartCommand.php',
 ];
 
 try {
