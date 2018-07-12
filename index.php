@@ -27,13 +27,17 @@
 				</tr>
 			</thead>
 			<tbody>
+			<pre>
 			<?php
 				$text=fopen('@demoin_bot_update.log','r');
 				$text_content= fread($text,filesize("@demoin_bot_update.log"));
-				var_dump($text_content);
+				
 				fclose($text);
 				
-				$split_text_content=explode("\r",$text_content);
+				$replace= str_replace("} {","} </br> {",$text_content);
+				// echo $replace;
+				$split_text_content=explode("</br>",$replace);
+				// print_r($split_text_content);
 				foreach($split_text_content as $arr){
 					if(strlen($arr) >0 ){
 						$msg_json=json_decode($arr);
@@ -52,6 +56,13 @@
 			?>
 			</tbody>
 		</table>
+		
+		<p>
+			<small>
+				Raw update log
+			</small> <br>
+			<?php print_r($text_content); ?>
+		</p>
 	</body>
 	<script>
 		setInterval(function(){
