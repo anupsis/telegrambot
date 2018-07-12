@@ -70,8 +70,8 @@
 		</p>
 	</body>
 	<script>
-		// setInterval(function(){
-			// window.location.reload();
-		// }, 5000)
+		setInterval(function(){
+			window.location.reload();
+		}, 5000)
 	</script>
 </html>
