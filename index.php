@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<h1>
-			This index for tes telegram bot
+			This index for tes telegram bot, come join <b>@demoin_bot</b>
 		</h1>
 		
 		<p style="color:red">

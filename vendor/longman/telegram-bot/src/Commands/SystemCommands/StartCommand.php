@@ -55,7 +55,7 @@ class StartCommand extends SystemCommand
 		
 		$name = $message->getFrom()->getFirstName();
 		
-        $text    = 'Hi '.$name.'!' . PHP_EOL . 'Type /help to see all commands!';
+        $text    = 'Hi '.$name.'!' . PHP_EOL . 'Please introduce your bio';
         $data = [
             'chat_id' => $chat_id,
             'text'    => $text,
